@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, TextInput, TouchableOpacity, Image, ScrollView, ImageBackground, CheckBox } from "react-native";
 
 
-export default function Screen1() {
+export default function Screen1({navigation}) {
 
     return (
         <View>
@@ -21,7 +21,7 @@ export default function Screen1() {
                     <Image source={require('../images/grow.png')} />
                 </View>
 
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity onPress={() => navigation.navigate('Screen2')} style={styles.button}>
                     <Text style={styles.btn_text}>Get Started</Text>
                 </TouchableOpacity>
                 <View style={styles.view2}>
@@ -30,8 +30,8 @@ export default function Screen1() {
                         <Text style={styles.txt2}>
                             Login here
                             </Text>
-                    </TouchableOpacity>
-
+                    </TouchableOpacity >
+                  
                 </View>
 
             </ImageBackground>

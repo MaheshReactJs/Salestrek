@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, TextInput, TouchableOpacity, Image, ScrollView, ImageBackground, CheckBox } from "react-native";
 
 
-export default function Screen2({navigation}) {
+export default function Screen3({navigation}) {
 
     return (
         <View>
@@ -13,17 +13,20 @@ export default function Screen2({navigation}) {
                 <View style={styles.name}>
                     <Image source={require('../assets/name_green1.png')} />
                 </View>
+                <View style={{marginLeft:50, top:10}}>
+                    <Text style={{color:'red'}}>Wrong Password</Text>
+                </View>
 
                 <View style={styles.view4}>
                     <Image source={require('../assets/phone.png')} style={{ top: 16 }}></Image>
                     <TextInput style={styles.number} placeholder={"Enter Your Phone Number"}></TextInput>
                 </View>
 
-                <View style={{ marginLeft: 60 }}>
-                    <Image source={require('../assets/Line.png')}></Image>
+                <View style={{ marginLeft: 58 }}>
+                    <Image source={require('../assets/Line.png')} style={{width:285}}></Image>
                 </View>
                 <View style={{ marginLeft: 60 }}>
-                    <Image source={require('../assets/password.png')}></Image>
+                    <Image source={require('../assets/wrong_pass.png')}></Image>
                 </View>
 
                 <View style={styles.view5}>
@@ -36,7 +39,7 @@ export default function Screen2({navigation}) {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Screen3')} style={styles.login}>
+                <TouchableOpacity onPress={() => navigation.navigate('Screen4')} style={styles.login}>
                     <Text style={styles.txt4}>
                         Login</Text>
                 </TouchableOpacity>
@@ -60,8 +63,6 @@ export default function Screen2({navigation}) {
                             </Text>
                     </TouchableOpacity>
                 </View>
-
-
             </ImageBackground>
         </View >
 
@@ -69,10 +70,10 @@ export default function Screen2({navigation}) {
 }
 
 const styles = StyleSheet.create({
+
     banner: {
         height: ('100%'),
         width: ('100%'),
-
     },
     login: {
         marginTop: 20, height: 42, width: 293, borderRadius: 10, alignSelf: 'center', backgroundColor: '#1DAD24'
