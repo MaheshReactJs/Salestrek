@@ -11,28 +11,29 @@ export default function Screen8({ navigation }) {
     return (
         <View>
             <ImageBackground source={require('../assets/banner2.png')} style={styles.banner}>
-                <View style={{ margin: 30 }}>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
+                <View style={styles.v1}>
+                    <Text style={styles.t3}>
                         Verify OTP
                   </Text>
                     <Text style={styles.enter}>
                         We have sent an OTP to your mobile number
                   </Text>
-                    <Text style={{ color: 'black', marginLeft: 10 }}>
-                        95022222222 <TouchableOpacity><Text style={{ color: 'green', textDecorationLine: 'underline', top: 3 }}>Change</Text></TouchableOpacity>
+                    <Text style={styles.t1}>
+                        95022222222 <TouchableOpacity>
+                            <Text style={styles.t2}>Change</Text></TouchableOpacity>
                     </Text>
                 </View>
-                <View style={{flexDirection:'row', justifyContent:'center'}}>
-                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5, margin:10}}>
+                <View style={styles.box}>
+                    <View style={styles.view7}>
                         <TextInput keyboardType={'phone-pad'}></TextInput>
                     </View>
-                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                    <View style={styles.view7}>
                         <TextInput keyboardType={'phone-pad'}></TextInput>
                     </View>
-                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                    <View style={styles.view7}>
                         <TextInput keyboardType={'phone-pad'}></TextInput>
                     </View>
-                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                    <View style={styles.view7}>
                         <TextInput keyboardType={'phone-pad'}></TextInput>
                     </View>
                     
@@ -55,7 +56,7 @@ export default function Screen8({ navigation }) {
                             </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ marginLeft: 50 }}>
+                <View style={styles.v2}>
                     <Image source={require('../assets/Line.png')} ></Image>
                 </View>
                 <View style={styles.view3}>
@@ -79,6 +80,21 @@ const styles = StyleSheet.create({
         height: ('100%'),
         width: ('100%'),
     },
+    v1:{
+        margin: 30
+    },
+    v2:{
+        marginLeft: 50 
+    },
+    t1:{
+        color: 'black', marginLeft: 10
+    },
+    t3:{
+        fontSize: 20, fontWeight: 'bold' 
+    },
+    t2:{
+        color: 'green', textDecorationLine: 'underline', top: 3
+    },
     txt4: {
         color: 'white', textAlign: 'center', top: 10
     },
@@ -87,6 +103,12 @@ const styles = StyleSheet.create({
     },
     view6: {
         flexDirection: 'row', alignSelf: 'center', marginTop: 180
+    },
+    box:{
+        flexDirection:'row', justifyContent:'center'
+    },
+    view7:{
+        height:54, width:54, backgroundColor:'white', borderRadius:5, margin:10
     },
     view3: {
         flexDirection: 'row', alignSelf: 'center', marginTop: 20

@@ -23,7 +23,7 @@ export default function Screen7({ navigation }) {
                     <Image source={require('../assets/phone.png')} style={{ top: 16 }}></Image>
                     <TextInput style={styles.number} placeholder={"Enter Your Phone Number"}></TextInput>
                 </View>
-                <View style={{ marginLeft: 50 }}>
+                <View style={styles.v2}>
                     <Image source={require('../assets/Line.png')} style={{ tintColor: '#2B2E2E' }}></Image>
                 </View>
                 <TouchableOpacity onPress={() => navigation.navigate('Screen8')} style={styles.login}>
@@ -48,7 +48,7 @@ export default function Screen7({ navigation }) {
                             </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={{ marginLeft: 50 }}>
+                <View style={styles.v2}>
                     <Image source={require('../assets/Line.png')} ></Image>
                 </View>
                 <View style={styles.view3}>
@@ -74,6 +74,9 @@ const styles = StyleSheet.create({
     },
     txt4: {
         color: 'white', textAlign: 'center', top: 10
+    },
+    v2:{
+        marginLeft: 50
     },
     view2: {
         flexDirection: 'row', alignSelf: 'center', marginTop: 80
