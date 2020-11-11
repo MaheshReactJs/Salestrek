@@ -1,8 +1,12 @@
+
+//Mahesh React Native 11/10/2020 
+//screen 22
+
 import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, TextInput, TouchableOpacity, Image, ScrollView, ImageBackground, CheckBox } from "react-native";
 
 
-export default function Screen5({navigation}) {
+export default function Screen6({ navigation }) {
 
     return (
         <View>
@@ -22,9 +26,9 @@ export default function Screen5({navigation}) {
                 <View style={{ marginLeft: 50 }}>
                     <Image source={require('../assets/Line.png')} style={{ tintColor: '#2B2E2E' }}></Image>
                 </View>
-                <TouchableOpacity  onPress={() => navigation.navigate('Screen6')} style={styles.login}>
+                <TouchableOpacity  onPress={() => navigation.navigate('Screen7')} style={styles.login}>
                     <Text style={styles.txt4}>
-                        Get Password</Text>
+                        Generate OTP</Text>
                 </TouchableOpacity>
 
                 <View style={styles.view2}>

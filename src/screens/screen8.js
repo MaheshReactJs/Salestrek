@@ -1,37 +1,48 @@
+
+//Mahesh React Native 11/10/2020 
+//screen 23
+
 import React, { useState } from "react";
 import { View, Picker, StyleSheet, Text, TextInput, TouchableOpacity, Image, ScrollView, ImageBackground, CheckBox } from "react-native";
 
 
-export default function Screen5({navigation}) {
+export default function Screen8({ navigation }) {
 
     return (
         <View>
             <ImageBackground source={require('../assets/banner2.png')} style={styles.banner}>
                 <View style={{ margin: 30 }}>
                     <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
-                        Forgot Password?
+                        Verify OTP
                   </Text>
                     <Text style={styles.enter}>
-                        Enter your registered number you will receive your password as message
+                        We have sent an OTP to your mobile number
                   </Text>
+                    <Text style={{ color: 'black', marginLeft: 10 }}>
+                        95022222222 <TouchableOpacity><Text style={{ color: 'green', textDecorationLine: 'underline', top: 3 }}>Change</Text></TouchableOpacity>
+                    </Text>
                 </View>
-                <View style={styles.view4}>
-                    <Image source={require('../assets/phone.png')} style={{ top: 16 }}></Image>
-                    <TextInput style={styles.number} placeholder={"Enter Your Phone Number"}></TextInput>
+                <View style={{flexDirection:'row', justifyContent:'center'}}>
+                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5, margin:10}}>
+                        <TextInput keyboardType={'phone-pad'}></TextInput>
+                    </View>
+                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                        <TextInput keyboardType={'phone-pad'}></TextInput>
+                    </View>
+                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                        <TextInput keyboardType={'phone-pad'}></TextInput>
+                    </View>
+                    <View style={{height:54, width:54, backgroundColor:'white', borderRadius:5,  margin:10}}>
+                        <TextInput keyboardType={'phone-pad'}></TextInput>
+                    </View>
+                    
                 </View>
-                <View style={{ marginLeft: 50 }}>
-                    <Image source={require('../assets/Line.png')} style={{ tintColor: '#2B2E2E' }}></Image>
-                </View>
-                <TouchableOpacity  onPress={() => navigation.navigate('Screen6')} style={styles.login}>
-                    <Text style={styles.txt4}>
-                        Get Password</Text>
-                </TouchableOpacity>
-
+             
                 <View style={styles.view2}>
-                    <Text style={styles.txt}>Not have account?</Text>
+                    <Text style={styles.txt}>Didn't receive the code?</Text>
                     <TouchableOpacity>
                         <Text style={styles.txt2}>
-                            SignUp here
+                            Resend OTP
                             </Text>
                     </TouchableOpacity>
                 </View>
@@ -75,7 +86,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row', alignSelf: 'center', marginTop: 80
     },
     view6: {
-        flexDirection: 'row', alignSelf: 'center', marginTop: 120
+        flexDirection: 'row', alignSelf: 'center', marginTop: 180
     },
     view3: {
         flexDirection: 'row', alignSelf: 'center', marginTop: 20
@@ -87,7 +98,7 @@ const styles = StyleSheet.create({
         color: '#2B2E2E', fontSize: 15
     },
     txt2: {
-        color: '#2B2E2E', marginLeft: 10, textDecorationLine: 'underline'
+        color: 'green', marginLeft: 10, top: 3
     },
     num: {
         color: '#00A50D', marginLeft: 10, fontSize: 18
@@ -107,6 +118,9 @@ const styles = StyleSheet.create({
     },
     enter: {
         fontSize: 15, margin: 10, marginTop: 40
+    },
+    enter2: {
+        fontSize: 15, marginLeft: 10
     },
 
 });
