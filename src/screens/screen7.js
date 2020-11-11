@@ -30,6 +30,10 @@ export default function Screen7({ navigation }) {
                     <Text style={styles.txt4}>
                         Generate OTP</Text>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Screen8')} style={styles.login}>
+                    <Text style={styles.txt4}>
+                        Generate OTP</Text>
+                </TouchableOpacity>
 
                 <View style={styles.view2}>
                     <Text style={styles.txt}>Not have account?</Text>
